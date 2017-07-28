@@ -1,16 +1,17 @@
 var TelegramBot=require('node-telegram-bot-api');
 var token='416522274:AAFqTsF0YDQaGUIH2tL66RUWTjQOkqaxTwI';
 var bot=new TelegramBot(token,{polling: true});
-
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
 bot.getMe().then(function (me){
     console.log("Hi I am %s!",me.username);
 });
 
 
 bot.onText(/\/start/,function(msg,match){
-    bot.sendMessage(msg.chat.id,"ŒÊ‘ ¬„œÌœ",{
+    bot.sendMessage(msg.chat.id,"√é√¶√î √Ç√£√è√≠√è",{
         "reply_markup":{
-            "keyboard":[["”·«„","Œœ«Õ«›Ÿ"],["„Œ ’« "]]
+            "keyboard":[["√ì√°√á√£","√é√è√á√ç√á√ù√ô"],["√£√é√ä√ï√á√ä"]]
         }
     });
 });
@@ -19,13 +20,13 @@ bot.onText(/\/sendpic/,(msg)=>{
 });
 
 bot.onText(/\/glass/, function(msg, match) {
-  var text = '”«‰œÊÌç „Ê—œ ⁄·«ﬁÂ ‘„« çÌ”  ø';
+  var text = '√ì√á√§√è√¶√≠¬ç √£√¶√ë√è √ö√°√á√û√• √î√£√á ¬ç√≠√ì√ä ¬ø';
 
   var keyboardStr = JSON.stringify({
       inline_keyboard: [
         [
-          {text:'»‰œ—Ì',callback_data:'bandari'},
-          {text:'Â‰œÌ',callback_data:'hendi'}
+          {text:'√à√§√è√ë√≠',callback_data:'bandari'},
+          {text:'√•√§√è√≠',callback_data:'hendi'}
         ]
       ]
   });
@@ -36,24 +37,24 @@ bot.onText(/\/glass/, function(msg, match) {
 
 
 bot.on('callback_query', function (msg) {
-  bot.answerCallbackQuery(msg.id, '‘„« «‰ Œ«» ò—œÌœ', false);
+  bot.answerCallbackQuery(msg.id, '√î√£√á √á√§√ä√é√á√à Àú√ë√è√≠√è', false);
 });
 
 
 
 bot.on('message',(msg)=>{
-    var Hi="”·«„";
+    var Hi="√ì√°√á√£";
     if(msg.text.toLowerCase().indexOf(Hi)===0){
-        bot.sendMessage(msg.from.id,msg.from.first_name+"”·«„");
+        bot.sendMessage(msg.from.id,msg.from.first_name+"√ì√°√á√£");
     }
- var Bye="Œœ«Õ«›Ÿ";
+ var Bye="√é√è√á√ç√á√ù√ô";
     if(msg.text.toLowerCase().indexOf(Bye)===0){
-        bot.sendMessage(msg.chat.id,"«„ÌœÊ«—Ì„ »«“Â„ ‘„« —« »»Ì‰Ì„");
+        bot.sendMessage(msg.chat.id,"√á√£√≠√è√¶√á√ë√≠√£ √à√á√í√•√£ √î√£√á √ë√á √à√à√≠√§√≠√£");
     }
 
-var location="„Œ ’« ";
+var location="√£√é√ä√ï√á√ä";
 if(msg.text.toLowerCase().indexOf(location)===0){
     bot.sendLocation(msg.chat.id,32.347207853426326,51.49647653393549);
-    bot.sendMessage(msg.chat.id,"„‰ «Ì‰Ã« Â” „");
+    bot.sendMessage(msg.chat.id,"√£√§ √á√≠√§√å√á √•√ì√ä√£");
 }
 });
