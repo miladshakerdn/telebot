@@ -1,0 +1,38 @@
+{
+  "name": "node-js-getting-started",
+  "version": "0.2.6",
+  "main": "index.js",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "5.9.1",
+    "npm": "3.7.3"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-telegram-bot-api":"*",
+    "q": "^1.4.1",
+    "request": "^2.69.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miladtelebot/telebot"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "bugs": {
+    "url": "https://github.com/miladtelebot/bot/issues"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  }
+}
