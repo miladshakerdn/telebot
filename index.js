@@ -1,8 +1,6 @@
 var TelegramBot=require('node-telegram-bot-api');
 var token='416522274:AAFqTsF0YDQaGUIH2tL66RUWTjQOkqaxTwI';
 var bot=new TelegramBot(token,{polling: true});
-var port_number = server.listen(process.env.PORT || 3000);
-app.listen(port_number);
 bot.getMe().then(function (me){
     console.log("Hi I am %s!",me.username);
 });
