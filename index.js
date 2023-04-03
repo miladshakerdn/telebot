@@ -1,4 +1,5 @@
 var TelegramBot=require('node-telegram-bot-api');
+// Change API token at 2023/04/03
 var token='416522274:AAFqTsF0YDQaGUIH2tL66RUWTjQOkqaxTwI';
 var bot=new TelegramBot(token,{polling: true});
 bot.getMe().then(function (me){
